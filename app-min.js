@@ -1,0 +1,1 @@
+var simpleMessage="I dont have important information for you but I need this to test my grunt task :D ";3<simpleMessage.length&&console.log(simpleMessage);

@@ -12,12 +12,22 @@ module.exports = function(grunt){
           'styles-min.css': ['styles.css']
         }
       }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'app-min.js': ['app.js']
+        }
+      }
     }
   });
 
   // Load the plugin
   grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+
 
   //Do the tast
-  grunt.registerTask('default', ['cssmin'])
+  grunt.registerTask('default', ['cssmin', 'uglify'])
 };
